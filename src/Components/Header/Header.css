@@ -1,0 +1,96 @@
+@import url("http://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Nova Flat");
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap");
+
+/* Header */
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  z-index: 999;
+  position: sticky !important;
+  top: 0;
+  left: 0;
+}
+
+#header .logo img{
+  height: 70px;
+  align-items:flex-start;
+  object-fit: cover;
+  display: none;
+}
+
+#header .logo{
+  display: flex;
+  cursor: pointer;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+#navbar .link {
+  list-style: none;
+  padding: 0 20px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  transition: 0.3s ease;
+}
+
+#navbar .link:hover,
+#navbar .link .active {
+    color: orangered;
+    transform: scaleX(1);
+    transition: transform 0.25s ease-out;
+    cursor: pointer;
+}
+
+#navbar .link .active::after,
+#navbar .link:hover::after {
+  content: "";
+  width: 23%;
+  height: 2px;
+  background: orangered;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+  transform: scaleX(0);
+  transform-origin: bottom left;
+}
+
+#searchbar input{
+  height: 2rem;
+  padding: 0 1.25em;
+  font-size: 16px;
+  width: 70%;
+  border: 1px solid transparent;
+  border-radius: 25px;
+  outline: none;
+  border-top-right-radius:0;
+  border-bottom-right-radius:0;
+  color: #333;
+}
+
+#searchbar button{
+  display: inline-block;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  height: 2rem;
+  left: -3px;
+  transition: 350ms ease;
+  background-color: #088178;
+  
+}
+
+#searchbar button:hover{
+  cursor: pointer;
+  background-color: orangered;
+}
